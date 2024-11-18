@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "Daily Visits (December)"
+	},
+	axisX:{
+		valueFormatString: "DD MMM",
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true
+		}
+	},
+	axisY: {
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+		}
+	},
+	data: [{
+		type: "area",
+		xValueFormatString: "DD MMM",
+		dataPoints: [{ x: new Date(0, 11, 01), y: 0 },{ x: new Date(0, 11, 02), y: 0 },{ x: new Date(0, 11, 03), y: 0 },{ x: new Date(0, 11, 04), y: 0 },{ x: new Date(0, 11, 05), y: 0 },{ x: new Date(0, 11, 06), y: 0 },{ x: new Date(0, 11, 07), y: 0 },{ x: new Date(0, 11, 08), y: 0 },{ x: new Date(0, 11, 09), y: 0 },{ x: new Date(0, 11, 10), y: 0 },{ x: new Date(0, 11, 11), y: 0 },{ x: new Date(0, 11, 12), y: 0 },{ x: new Date(0, 11, 13), y: 0 },{ x: new Date(0, 11, 14), y: 0 },{ x: new Date(0, 11, 15), y: 0 },{ x: new Date(0, 11, 16), y: 0 },{ x: new Date(0, 11, 17), y: 0 },{ x: new Date(0, 11, 18), y: 0 },{ x: new Date(0, 11, 19), y: 0 },{ x: new Date(0, 11, 20), y: 0 },{ x: new Date(0, 11, 21), y: 0 },{ x: new Date(0, 11, 22), y: 0 },{ x: new Date(0, 11, 23), y: 0 },{ x: new Date(0, 11, 24), y: 0 },{ x: new Date(0, 11, 25), y: 0 },{ x: new Date(0, 11, 26), y: 0 },{ x: new Date(0, 11, 27), y: 0 },{ x: new Date(0, 11, 28), y: 0 },{ x: new Date(0, 11, 29), y: 0 },{ x: new Date(0, 11, 30), y: 0 },{ x: new Date(0, 11, 31), y: 672 },]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</body>
+</html>

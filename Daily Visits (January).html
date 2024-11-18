@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "Daily Visits (January)"
+	},
+	axisX:{
+		valueFormatString: "DD MMM",
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true
+		}
+	},
+	axisY: {
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+		}
+	},
+	data: [{
+		type: "area",
+		xValueFormatString: "DD MMM",
+		dataPoints: [{ x: new Date(0, 00, 01), y: 869 },{ x: new Date(0, 00, 02), y: 1014 },{ x: new Date(0, 00, 03), y: 1375 },{ x: new Date(0, 00, 04), y: 1272 },{ x: new Date(0, 00, 05), y: 425 },{ x: new Date(0, 00, 06), y: 716 },{ x: new Date(0, 00, 07), y: 1783 },{ x: new Date(0, 00, 08), y: 1142 },{ x: new Date(0, 00, 09), y: 1137 },{ x: new Date(0, 00, 10), y: 995 },{ x: new Date(0, 00, 11), y: 1344 },{ x: new Date(0, 00, 12), y: 550 },{ x: new Date(0, 00, 13), y: 552 },{ x: new Date(0, 00, 14), y: 776 },{ x: new Date(0, 00, 15), y: 1453 },{ x: new Date(0, 00, 16), y: 1373 },{ x: new Date(0, 00, 17), y: 1813 },{ x: new Date(0, 00, 18), y: 1619 },{ x: new Date(0, 00, 19), y: 1146 },{ x: new Date(0, 00, 20), y: 942 },{ x: new Date(0, 00, 21), y: 1493 },{ x: new Date(0, 00, 22), y: 1664 },{ x: new Date(0, 00, 23), y: 1786 },{ x: new Date(0, 00, 24), y: 1848 },{ x: new Date(0, 00, 25), y: 4120 },{ x: new Date(0, 00, 26), y: 738 },{ x: new Date(0, 00, 27), y: 1169 },{ x: new Date(0, 00, 28), y: 1837 },{ x: new Date(0, 00, 29), y: 1408 },{ x: new Date(0, 00, 30), y: 2019 },{ x: new Date(0, 00, 31), y: 842 },]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</body>
+</html>

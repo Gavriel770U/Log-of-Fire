@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	exportEnabled: true,
+	theme: "light1", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Visits Per Hour"
+	},
+  	axisY: {
+      includeZero: true
+    },
+	data: [{
+		type: "column", //change type to bar, line, area, pie, etc
+		//indexLabel: "{y}", //Shows y value on all Data Points
+		indexLabelFontColor: "#5A5757",
+      	indexLabelFontSize: 16,
+		indexLabelPlacement: "outside",
+		dataPoints: [{ x: 0, y: 1787 },{ x: 1, y: 1298 },{ x: 2, y: 897 },{ x: 3, y: 1095 },{ x: 4, y: 1701 },{ x: 5, y: 1603 },{ x: 6, y: 1897 },{ x: 7, y: 3919 },{ x: 8, y: 6020 },{ x: 9, y: 5840 },{ x: 10, y: 7109 },{ x: 11, y: 8214 },{ x: 12, y: 5792 },{ x: 13, y: 6307 },{ x: 14, y: 4914 },{ x: 15, y: 5924 },{ x: 16, y: 5797 },{ x: 17, y: 3186 },{ x: 18, y: 3336 },{ x: 19, y: 3209 },{ x: 20, y: 3748 },{ x: 21, y: 3290 },{ x: 22, y: 2503 },{ x: 23, y: 2451 },]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</body>
+</html>
